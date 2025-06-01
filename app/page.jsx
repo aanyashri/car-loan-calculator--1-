@@ -10,17 +10,18 @@ import { Separator } from "@/components/ui/separator"
 import { Calculator, Car, DollarSign, TrendingUp, AlertCircle, CheckCircle, XCircle } from "lucide-react"
 
 export default function CarLoanCalculator() {
-  const [loanData, setLoanData] = useState({
-    name: "",
-    age: 25,
-    monthlyIncome: 0,
-    otherIncome: 0,
-    existingEMIs: [],
-    loanAmount: 500000,
-    interestRate: 8.5,
-    tenure: 60,
-    monthlyExpenses: 0,
-  })
+ const [loanData, setLoanData] = useState({
+  name: "",
+  age: "",
+  monthlyIncome: "",
+  otherIncome: "",
+  existingEMIs: [],
+  loanAmount: "",
+  interestRate: "",
+  tenure: "",
+  monthlyExpenses: ""
+});
+
 
   const [result, setResult] = useState(null)
 
@@ -135,7 +136,7 @@ export default function CarLoanCalculator() {
             <h1 className="text-3xl font-bold text-gray-900">Car Loan Eligibility Calculator</h1>
           </div>
           <p className="text-gray-600">
-            Calculate your car loan eligibility based on FOIR (Fixed Obligation to Income Ratio)
+            Calculate your car loan eligibility based on Adjust Mentable
           </p>
         </div>
 
@@ -373,7 +374,7 @@ export default function CarLoanCalculator() {
                 {/* FOIR Calculation */}
                 <Card>
                   <CardHeader>
-                    <CardTitle>FOIR Analysis</CardTitle>
+                    <CardTitle>Adjust Mentable</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-3">
